@@ -1,0 +1,25 @@
+#include<stdio.h>
+int sumofarrays(int num1[],int m,int num2[],int n)
+{
+  int sum=0;
+    for(int i=0;i<m;i++)
+    {
+      sum=sum+num1[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+      sum=sum+num2[i];
+    }
+  return sum;
+  }
+int main()
+{
+  int num1[]={1,2,3,4,5};
+  int num2[]={6,7,8,9,10};
+  int m=sizeof(num1)/sizeof(num1[0]);
+  int n=sizeof(num2)/sizeof(num2[0]);
+  int result=sumofarrays(num1,m,num2,n);
+  printf("sum of two arrays:%d\n",result);
+  return 0;
+}
+
