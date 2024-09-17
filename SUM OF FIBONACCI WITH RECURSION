@@ -1,0 +1,29 @@
+#include<stdio.h>
+int fib(int n)
+{
+  if(n==0)
+  return 0;
+  if(n==1)
+  return 1;
+  return fib(n-1)+fib(n-2);
+}
+int sum(int n)
+{
+  int sum=0;
+  for(int i=0;i<=n;i++)
+  {
+    sum=sum+fib(i);
+  }
+  return sum;
+}
+int main()
+{
+  int n=5;
+  printf("fib is:");
+  for(int i=0;i<=n;i++)
+  {
+    printf("%d ",fib(i));
+  }
+  printf("\nsum of fib is:%d",sum(n));
+  return 0;
+}
